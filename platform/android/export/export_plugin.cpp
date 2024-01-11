@@ -1840,6 +1840,7 @@ void EditorExportPlatformAndroid::get_export_options(List<ExportOption> *r_optio
 	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "package/show_in_android_tv"), false));
 	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "package/show_in_app_library"), true));
 	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "package/show_as_launcher_app"), false));
+	r_options->push_back(ExportOption(PropertyInfo(Variant::BOOL, "package/use_godot_main_activity"), true));
 
 	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, launcher_icon_option, PROPERTY_HINT_FILE, "*.png"), ""));
 	r_options->push_back(ExportOption(PropertyInfo(Variant::STRING, launcher_adaptive_icon_foreground_option, PROPERTY_HINT_FILE, "*.png"), ""));

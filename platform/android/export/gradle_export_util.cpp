@@ -266,10 +266,12 @@ String _get_activity_tag(const Ref<EditorExportPlatform> &p_export_platform, con
 			bool_to_string(p_preset->get("package/exclude_from_recents")),
 			orientation,
 			bool_to_string(bool(GLOBAL_GET("display/window/size/resizable"))));
-
-	manifest_activity_text += "            <intent-filter>\n"
-							  "                <action android:name=\"android.intent.action.MAIN\" />\n"
-							  "                <category android:name=\"android.intent.category.DEFAULT\" />\n";
+	manifest_activity_text += "            <intent-filter>\n";
+	bool use_godot_main_activity = p_preset->get("package/use_godot_main_activity");
+	if (use_godot_main_activity) {
+		manifest_activity_text += "                <action android:name=\"android.intent.action.MAIN\" />\n"
+								  "                <category android:name=\"android.intent.category.DEFAULT\" />\n";
+	}
 
 	bool show_in_app_library = p_preset->get("package/show_in_app_library");
 	if (show_in_app_library) {

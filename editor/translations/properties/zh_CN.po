@@ -3732,6 +3732,9 @@ msgstr "显示在 App 库中"
 msgid "Show as Launcher App"
 msgstr "作为启动器 App 显示"
 
+msgid "Use Godot Main Activity"
+msgstr "使用默认Activity的启动项"
+
 msgid "Graphics"
 msgstr "图形"
 

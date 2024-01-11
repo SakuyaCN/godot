@@ -115,6 +115,10 @@
 			If [code]true[/code], this app will show in the device's app library.
 			[b]Note:[/b] This is [code]true[/code] by default.
 		</member>
+		<member name="package/use_godot_main_activity" type="bool" setter="" getter="">
+			If [code]false[/code], The default Activity will be canceled as a startup item, and other activities must be manually declared as startup items.
+			[b]Note:[/b] This is [code]true[/code] by default.
+		</member>
 		<member name="package/signed" type="bool" setter="" getter="">
 			If [code]true[/code], package signing is enabled.
 		</member>
